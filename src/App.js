@@ -17,13 +17,13 @@ useEffect(() => {
 }, [artId])
 
 
+const handleIterate = (e) => {
+  setArtId(artId + Number(e.target.value)) 
+}
   return (
     <div className="App">
       <Gallery objectImg={data.primaryImage} artist={data.artistDisplayName} title={data.title} />
-      <ButtonBar />
-      const handleIterate = (e) => {
-        setArtId(artId + Number(e.target.value)) 
-      }
+      <ButtonBar handleIterate={handleIterate} />
       
     </div>
     
